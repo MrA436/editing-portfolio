@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; background: #0a0a0a; }
+body { color: #fafafa; -webkit-font-smoothing: antialiased; }
+section[id] { scroll-margin-top: 5rem; }
+:focus-visible { outline: 2px solid #9db8c4; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation: none !important; transition: none !important; }
+}
