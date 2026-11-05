@@ -16,15 +16,15 @@ export default function Home() {
         <section className="mx-auto max-w-6xl px-6 pb-24 pt-40 md:pb-32 md:pt-52">
           <p className="mb-5 text-sm tracking-wide text-accent">SIGILITH · INDEPENDENT CREATIVE STUDIO</p>
           <p className="mb-8 max-w-xl text-xl text-neutral-300">
-            Short-form video editing for educators and storytellers.
+            Short-form video editing that makes every second count.
           </p>
           <h1 className="max-w-4xl text-5xl font-semibold leading-[1.05] tracking-tighter sm:text-6xl md:text-8xl">
             Stories worth watching.
             <span className="block text-neutral-500">Edits worth remembering.</span>
           </h1>
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-neutral-400">
-            I craft educational and documentary-style short videos through visual storytelling, clean captions,
-            purposeful pacing, and thoughtful sound design.
+            I turn raw footage and ideas into engaging short-form videos through thoughtful storytelling, clean
+            captions, purposeful pacing, and sound design.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a href="#work" className={btnPrimary}>View My Work</a>
@@ -46,19 +46,19 @@ export default function Home() {
             <h2 className="text-3xl font-semibold tracking-tight">A little about my work</h2>
             <div className="max-w-xl space-y-5 text-lg leading-relaxed text-neutral-400">
               <p>
-                I&rsquo;m a short-form video editor focused on making educational and documentary-style content
-                more engaging through thoughtful editing.
+                I&rsquo;m a short-form video editor who enjoys turning raw footage and ideas into engaging,
+                well-crafted videos.
               </p>
               <p>
-                My approach combines visual storytelling, clean captions, sound design, and purposeful pacing to
-                make every second count.
+                My approach combines visual storytelling, clean captions, purposeful pacing, and thoughtful sound
+                design to make content more compelling and enjoyable to watch.
               </p>
               <div className="border-t border-white/10 pt-6">
                 <h3 className="text-xl font-medium tracking-tight text-white">AI-assisted visual production</h3>
                 <p className="mt-3">
-                  I use AI tools to generate and enhance visual assets when a project calls for custom scenes,
-                  animations, or illustrative footage. I combine these assets with editing, pacing, captions,
-                  sound design, and storytelling to create the final video.
+                  I use AI-assisted tools to create and enhance visual assets when a project calls for custom
+                  scenes, animations, or illustrative footage. I combine these assets with editing, visual
+                  direction, pacing, captions, and sound design to bring the final video together.
                 </p>
               </div>
             </div>

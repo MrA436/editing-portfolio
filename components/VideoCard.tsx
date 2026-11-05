@@ -82,7 +82,7 @@ export default function VideoCard({ project }: { project: Project }) {
       <p className="mt-5 text-sm text-accent">{project.kind}</p>
       <h3 className="mt-1 text-xl font-medium tracking-tight">{project.title}</h3>
       <p className="mt-2 text-neutral-400">{project.description}</p>
-      <p className="mt-3 text-sm text-neutral-500">{project.note}</p>
+      <p className="mt-3 text-xs tracking-wider text-neutral-500">{project.note}</p>
     </article>
   );
 }
