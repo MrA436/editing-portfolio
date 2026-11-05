@@ -1,10 +1,10 @@
 // Everything you'll want to edit lives here.
 export const site = {
-  name: "Your Name",                       // shown in nav, footer, page title
+  name: "Sigilith",                       // shown in nav, footer, page title
   role: "Short-form video editor",
-  email: "you@example.com",                // replace
-  youtubeUrl: "https://youtube.com/@yourchannel", // replace with your channel link
-  siteUrl: "https://your-site.vercel.app", // replace after deploying
+  email: "sigilith1@gmail.com",                // replace
+  youtubeUrl: "https://www.youtube.com/@sigilith", // replace with your channel link
+  siteUrl: "https://editing-portfolio-smoky-seven.vercel.app/", // replace after deploying
   videoAspect: "9 / 16",                   // use "16 / 9" if your videos are horizontal
 };
 
