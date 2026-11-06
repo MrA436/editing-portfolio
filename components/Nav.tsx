@@ -12,12 +12,12 @@ const links = [
 export default function Nav() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-neutral-950/85 backdrop-blur">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-ink/85 backdrop-blur">
       <nav aria-label="Main" className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <a href="#top" className="font-medium tracking-tight">{site.name}</a>
-        <ul className="hidden gap-8 text-sm text-neutral-400 md:flex">
+        <ul className="hidden gap-8 text-sm text-muted md:flex">
           {links.map((l) => (
-            <li key={l.href}><a href={l.href} className="transition-colors hover:text-white">{l.label}</a></li>
+            <li key={l.href}><a href={l.href} className="transition-colors hover:text-ivory">{l.label}</a></li>
           ))}
         </ul>
         <button
@@ -33,7 +33,7 @@ export default function Nav() {
         <ul className="border-t border-white/5 px-6 py-4 md:hidden">
           {links.map((l) => (
             <li key={l.href}>
-              <a href={l.href} onClick={() => setOpen(false)} className="block py-3 text-neutral-300">{l.label}</a>
+              <a href={l.href} onClick={() => setOpen(false)} className="block py-3 text-ivory/80">{l.label}</a>
             </li>
           ))}
         </ul>

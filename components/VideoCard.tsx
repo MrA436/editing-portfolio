@@ -10,6 +10,7 @@ type Project = {
 export default function VideoCard({ project }: { project: Project }) {
   const [playing, setPlaying] = useState(false);
   const [thumbOk, setThumbOk] = useState(true);
+  const [videoError, setVideoError] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
 
   // The image can fail before React attaches onError, so check once after mount too.
@@ -20,7 +21,7 @@ export default function VideoCard({ project }: { project: Project }) {
 
   return (
     <article>
-      <div className="relative overflow-hidden rounded-md bg-neutral-900" style={{ aspectRatio: site.videoAspect }}>
+      <div className="relative overflow-hidden rounded-md bg-panel" style={{ aspectRatio: site.videoAspect }}>
         {!project.video ? (
           <div className="absolute inset-0 grid place-items-center">
             {thumbOk && (
@@ -33,7 +34,11 @@ export default function VideoCard({ project }: { project: Project }) {
                 className="absolute inset-0 h-full w-full object-cover opacity-60"
               />
             )}
-            <span className="relative text-sm text-neutral-400">Video coming soon</span>
+            <span className="relative text-sm text-muted">Video coming soon</span>
+          </div>
+        ) : playing && videoError ? (
+          <div className="absolute inset-0 grid place-items-center px-6 text-center text-sm text-muted">
+            This video couldn&rsquo;t be played. It may need converting to H.264 .mp4.
           </div>
         ) : playing ? (
           <video
@@ -41,7 +46,12 @@ export default function VideoCard({ project }: { project: Project }) {
             controls
             autoPlay
             playsInline
-            preload="none"
+            preload="auto"
+            onError={() => setVideoError(true)}
+            onLoadedMetadata={(e) => {
+              // Sound plays but there is no picture: the browser can't decode this video format
+              if (e.currentTarget.videoWidth === 0) setVideoError(true);
+            }}
             className="h-full w-full bg-black object-cover"
           />
         ) : (
@@ -81,8 +91,8 @@ export default function VideoCard({ project }: { project: Project }) {
       </div>
       <p className="mt-5 text-sm text-accent">{project.kind}</p>
       <h3 className="mt-1 text-xl font-medium tracking-tight">{project.title}</h3>
-      <p className="mt-2 text-neutral-400">{project.description}</p>
-      <p className="mt-3 text-xs tracking-wider text-neutral-500">{project.note}</p>
+      <p className="mt-2 text-muted">{project.description}</p>
+      <p className="mt-3 text-xs tracking-wider text-muted/70">{project.note}</p>
     </article>
   );
 }

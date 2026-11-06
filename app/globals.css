@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-html { scroll-behavior: smooth; background: #0a0a0a; }
-body { color: #fafafa; -webkit-font-smoothing: antialiased; }
+html { scroll-behavior: smooth; background: #0D0E10; }
+body { color: #F2F0EA; -webkit-font-smoothing: antialiased; }
 section[id] { scroll-margin-top: 5rem; }
-:focus-visible { outline: 2px solid #9db8c4; outline-offset: 3px; }
+:focus-visible { outline: 2px solid #B99A76; outline-offset: 3px; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   * { animation: none !important; transition: none !important; }
